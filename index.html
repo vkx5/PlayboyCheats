@@ -1378,7 +1378,10 @@ const ferramentasDB = {
     'Visual C++': 'https://download.visualstudio.microsoft.com/download/pr/6f02464a-5e9b-486d-a506-c99a17db9a83/8995548DFFFCDE7C49987029C764355612BA6850EE09A7B6F0FDDC85BDC5C280/VC_redist.x64.exe',
     'DirectX': 'https://download.microsoft.com/download/1/7/1/1718ccc4-6315-4d8e-9543-8e28a4e18c4c/dxwebsetup.exe',
     'Hyper V Disabler': 'https://files.catbox.moe/hy7rci.rar',
-    'DControl': 'https://files.catbox.moe/wv3ybv.rar'
+    'DControl': 'https://files.catbox.moe/wv3ybv.rar',
+    'Python 3.12': 'https://www.python.org/ftp/python/3.12.9/python-3.12.9-amd64.exe',
+    'Driver NVIDIA (GPU NVIDIA)': 'https://us.download.nvidia.com/nvapp/client/11.0.6.383/NVIDIA_app_v11.0.6.383.exe',
+    'Driver AMD (GPU AMD)': 'https://drivers.amd.com/drivers/installer/25.30/whql/amd-software-adrenalin-edition-26.2.2-minimalsetup-260225_web.exe'
   }
 };
 
@@ -1483,18 +1486,18 @@ const downloads = [
         nome:'CounterStrike External', 
         desc:'Senha: 1', 
         link:'',
-    compatibilidade: [
-      'Windows 10/11 64-bit',
-      'CS2 instalado',
-      'RAM: 8GB mínimo',
-      'GPU com DirectX 11',
-      'Visual C++ Redistributable 2022 x64',
-      'Python 3.8+',
-      'Secure Boot desativado'
-    ],
+        compatibilidade: [
+        'Windows 10/11 64-bit',
+        'CS2 instalado',
+        'RAM: 8GB mínimo',
+        'GPU com DirectX 11',
+        'Visual C++ Redistributable 2022 x64',
+        'Python 3.8+',
+        'Secure Boot desativado'
+        ],
         requisitos: {
           emuladores: [],
-          drivers: ['Visual C++', 'DirectX', 'DControl'],
+          drivers: ['Visual C++', 'DirectX', 'DControl', 'Python 3.12', 'Driver NVIDIA (GPU NVIDIA)', 'Driver AMD (GPU AMD)'],
           ferramentas: []
         }
       },
