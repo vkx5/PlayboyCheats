@@ -1222,6 +1222,270 @@
       background:var(--online);
       pointer-events:none;
     }
+
+    /* TUTORIAIS */
+    .tutorial-selector{
+      display:flex;
+      gap:12px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+    .tutorial-btn{
+      flex:1;
+      min-width:160px;
+      padding:16px 20px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      color:var(--text-muted);
+      font-weight:600;
+      font-size:.95rem;
+      cursor:pointer;
+      transition:.3s ease;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:center;
+    }
+    .tutorial-btn i{ font-size:1.2rem; }
+    .tutorial-btn:hover{
+      border-color:var(--primary);
+      color:var(--text);
+      background:var(--card-hover);
+      transform:translateY(-3px);
+      box-shadow:0 8px 24px rgba(26,92,255,.2);
+    }
+    .tutorial-btn.active{
+      border-color:var(--primary);
+      background:rgba(26,92,255,.12);
+      color:#fff;
+      box-shadow:0 4px 16px rgba(26,92,255,.3);
+    }
+    .tutorial-panel{ display:none; }
+    .tutorial-panel.active{ display:block; animation:fadeInUp .4s ease; }
+
+    .tutorial-steps{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .tutorial-step{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      overflow:hidden;
+      transition:.3s ease;
+    }
+    .tutorial-step:hover{
+      border-color:var(--border-light);
+    }
+    .step-header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:16px 18px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .step-number{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      background:rgba(26,92,255,.15);
+      border:1px solid rgba(26,92,255,.3);
+      color:var(--primary);
+      font-weight:700;
+      font-size:.9rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+    .step-title{
+      flex:1;
+      font-weight:600;
+      font-size:.95rem;
+      color:var(--text);
+    }
+    .step-icon{
+      color:var(--text-muted);
+      font-size:.85rem;
+      transition:.3s;
+    }
+    .tutorial-step.open .step-icon{ transform:rotate(180deg); color:var(--primary); }
+    .tutorial-step.open .step-header{ border-bottom:1px solid var(--border); }
+    .step-body{
+      display:none;
+      padding:16px 18px 18px;
+      font-size:.88rem;
+      color:var(--text-muted);
+      line-height:1.7;
+    }
+    .tutorial-step.open .step-body{ display:block; animation:fadeIn .25s ease; }
+
+    .step-body ul{
+      list-style:none;
+      padding:0;
+      margin:8px 0 0;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .step-body ul li{
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+    }
+    .step-body ul li::before{
+      content:'›';
+      color:var(--primary);
+      font-size:1.1rem;
+      line-height:1.4;
+      flex-shrink:0;
+    }
+    .step-tip{
+      margin-top:10px;
+      padding:10px 12px;
+      background:rgba(245,158,11,.08);
+      border:1px solid rgba(245,158,11,.2);
+      border-radius:6px;
+      color:var(--update);
+      font-size:.82rem;
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+    }
+    .step-tip i{ flex-shrink:0; margin-top:2px; }
+    .step-warn{
+      margin-top:10px;
+      padding:10px 12px;
+      background:rgba(239,68,68,.08);
+      border:1px solid rgba(239,68,68,.2);
+      border-radius:6px;
+      color:var(--risk);
+      font-size:.82rem;
+      display:flex;
+      align-items:flex-start;
+      gap:8px;
+    }
+    .step-warn i{ flex-shrink:0; margin-top:2px; }
+    .step-sub{
+      margin-top:10px;
+      padding:10px 14px;
+      background:var(--card-hover);
+      border:1px solid var(--border);
+      border-radius:6px;
+    }
+    .step-sub p{
+      font-size:.82rem;
+      color:var(--text-muted);
+      margin:0 0 6px;
+      font-weight:600;
+    }
+    .step-sub ul{ margin:0; }
+    .step-dl-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:12px;
+      padding:9px 18px;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      border-radius:7px;
+      font-size:.82rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:.2s;
+      text-decoration:none;
+    }
+    .step-dl-btn:hover{
+      background:var(--primary-dark);
+      transform:translateY(-2px);
+      box-shadow:0 6px 16px rgba(26,92,255,.35);
+    }
+    /* GRUPO SELECTOR */
+    .tutorial-group-selector{
+      display:flex;
+      gap:8px;
+      margin-bottom:16px;
+    }
+    .tut-group-btn{
+      padding:10px 22px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:8px;
+      color:var(--text-muted);
+      font-weight:600;
+      font-size:.88rem;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .tut-group-btn:hover{ border-color:var(--primary); color:var(--text); }
+    .tut-group-btn.active{
+      background:rgba(26,92,255,.12);
+      border-color:var(--primary);
+      color:#fff;
+    }
+    .tut-group-panel{ display:none; }
+    .tut-group-panel.active{ display:block; animation:fadeInUp .35s ease; }
+
+    /* PANEL HEADER */
+    .tut-panel-header{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:16px 18px;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      margin-bottom:14px;
+    }
+    .tut-panel-icon{
+      width:46px;
+      height:46px;
+      border-radius:10px;
+      border:1px solid;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.3rem;
+      flex-shrink:0;
+    }
+    .tut-panel-title{
+      font-size:1.05rem;
+      font-weight:700;
+      color:var(--text);
+    }
+    .tut-panel-tag{
+      font-size:.75rem;
+      color:var(--text-muted);
+      margin-top:2px;
+    }
+
+    /* HIGHLIGHT & KBD */
+    .hl{
+      color:#fff;
+      font-weight:600;
+    }
+    .kbkey{
+      display:inline-block;
+      background:var(--card-hover);
+      border:1px solid var(--border-light);
+      border-bottom:2px solid var(--border-light);
+      border-radius:4px;
+      padding:1px 7px;
+      font-size:.78rem;
+      font-family:monospace;
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    @media(max-width:768px){
+      .tutorial-btn{ min-width:110px; font-size:.78rem; padding:10px 10px; }
+      .tutorial-group-selector{ flex-wrap:wrap; }
+      .tut-group-btn{ font-size:.82rem; padding:8px 14px; }
+    }
   </style>
 </head>
 <body>
@@ -1250,6 +1514,9 @@
     <button class="tab" onclick="switchTab('ferramentas')" aria-label="Aba de Ferramentas">
       <i class="fa-solid fa-wrench"></i> Ferramentas
     </button>
+    <button class="tab" onclick="switchTab('tutoriais')" aria-label="Aba de Tutoriais">
+      <i class="fa-solid fa-book-open"></i> Tutoriais
+    </button>
   </div>
 
   <!-- TAB: DOWNLOADS -->
@@ -1260,6 +1527,11 @@
   <!-- TAB: FERRAMENTAS -->
   <div id="ferramentas" class="tab-content">
     <div id="content-ferramentas"></div>
+  </div>
+
+  <!-- TAB: TUTORIAIS -->
+  <div id="tutoriais" class="tab-content">
+    <div id="content-tutoriais"></div>
   </div>
 
   <footer>© 2026 PlayboyCheats — Central Completa</footer>
@@ -2182,8 +2454,520 @@ function createParticles(){
 
 createParticles();
 
+// ===================== TUTORIAIS =====================
+const S = t => `<strong class="hl">${t}</strong>`;
+const KB = t => `<kbd class="kbkey">${t}</kbd>`;
+
+const stepsDrivers = [
+  {
+    title: '📥 Baixar os Drivers',
+    body: `Vá em ${S('Ferramentas → Drivers Essenciais')} e baixe o ${S('Visual C++')} e o ${S('DirectX')}.`,
+    tip: `Clique com o botão direito nos instaladores e escolha ${S('"Executar como Administrador"')}.`,
+    warn: null, sub: null
+  },
+  {
+    title: '⚙️ Instalar como Administrador e Reiniciar',
+    body: `Instale o ${S('Visual C++')} e o ${S('DirectX')} como administrador. Após concluir, reinicie o PC antes de continuar.`,
+    tip: null,
+    warn: 'Reinicie o PC após a instalação. Pular essa etapa pode causar erros na execução.',
+    sub: null
+  }
+];
+
+const stepsEmulador = [
+  {
+    title: '📱 Baixar o Emulador Recomendado',
+    body: `Vá em ${S('Ferramentas → Emuladores')} e baixe o ${S('BlueStacks 5.12')} — versão mais estável para Free Fire.`,
+    tip: 'Evite versões mais novas do BlueStacks, pois podem causar incompatibilidade.',
+    warn: null, sub: null
+  },
+  {
+    title: '🔧 Configurar o Emulador',
+    body: `Abra o BlueStacks, acesse ${S('Configurações')} e aplique as opções abaixo:`,
+    tip: null, warn: null,
+    sub: {
+      label: 'Configurações recomendadas:',
+      items: [
+        `${S('Instância:')} Pie 64 / N32`,
+        `${S('Gráficos:')} Desempenho + OpenGL`,
+        `${S('Avançado:')} Android Debug Bridge (ADB) → Ativado`
+      ]
+    }
+  },
+  {
+    title: '📦 Instalar o APK do Free Fire',
+    body: `Com o BlueStacks aberto, pressione ${KB('Ctrl')} + ${KB('Shift')} + ${KB('B')} para abrir o instalador de APK. Selecione o arquivo do ${S('Free Fire V7A')} e aguarde.`,
+    tip: 'Certifique-se de que o APK foi completamente baixado antes de instalar.',
+    warn: null, sub: null
+  }
+];
+
+const tutoriaisData = {
+  freefire_ext: {
+    label: 'FreeFire External',
+    icon: 'fa-fire',
+    color: '#ff6b35',
+    tag: 'Free Fire',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire External')} e baixe o launcher. Senha do arquivo: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      ...stepsEmulador.slice(0,1),
+      {
+        title: '🎮 Baixar o Free Fire Recomendado (APK)',
+        body: `Vá em ${S('Ferramentas → Versões Free Fire')} e baixe o ${S('Free Fire V7A')} — versão recomendada para o External.`,
+        tip: null, warn: null, sub: null
+      },
+      stepsEmulador[1],
+      stepsEmulador[2]
+    ]
+  },
+  freefire_int: {
+    label: 'FreeFire Internal',
+    icon: 'fa-fire-flame-curved',
+    color: '#ff4444',
+    tag: 'Free Fire',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire Internal')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '📱 Baixar o Emulador Recomendado',
+        body: `Vá em ${S('Ferramentas → Emuladores')} e baixe o ${S('BlueStacks 5.22 (Tela Parada)')} — versão recomendada para o Internal.`,
+        tip: 'O Internal requer o BlueStacks 5.22 com a opção "Tela Parada" ativada.',
+        warn: null, sub: null
+      },
+      {
+        title: '🎮 Baixar o Free Fire Recomendado (APK)',
+        body: `Vá em ${S('Ferramentas → Versões Free Fire')} e baixe o ${S('Free Fire MAX AIMKILL')} ou ${S('FreeFire Tela')}.`,
+        tip: null, warn: null, sub: null
+      },
+      stepsEmulador[1],
+      stepsEmulador[2]
+    ]
+  },
+  freefire_classic: {
+    label: 'Free Fire Classic',
+    icon: 'fa-gamepad',
+    color: '#f59e0b',
+    tag: 'Free Fire',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Classic')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      ...stepsEmulador.slice(0,1),
+      {
+        title: '🎮 Baixar o Free Fire Recomendado (APK)',
+        body: `Vá em ${S('Ferramentas → Versões Free Fire')} e baixe o ${S('Free Fire V7A')}.`,
+        tip: null, warn: null, sub: null
+      },
+      stepsEmulador[1],
+      stepsEmulador[2]
+    ]
+  },
+  freefire_bypass_mobile: {
+    label: 'FF Bypass Mobile',
+    icon: 'fa-mobile-screen',
+    color: '#10b981',
+    tag: 'Free Fire',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Mobile')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      ...stepsEmulador.slice(0,1),
+      {
+        title: '🎮 Baixar o Free Fire Recomendado (APK)',
+        body: `Vá em ${S('Ferramentas → Versões Free Fire')} e baixe o ${S('FreeFire Tela')}.`,
+        tip: null, warn: null, sub: null
+      },
+      stepsEmulador[1],
+      stepsEmulador[2]
+    ]
+  },
+  freefire_bypass_replay: {
+    label: 'FF Bypass Replay',
+    icon: 'fa-rotate',
+    color: '#8b5cf6',
+    tag: 'Free Fire',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Replay')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      ...stepsEmulador.slice(0,1),
+      {
+        title: '🎮 Baixar o Free Fire Recomendado (APK)',
+        body: `Vá em ${S('Ferramentas → Versões Free Fire')} e baixe o ${S('Free Fire V7A')}.`,
+        tip: null, warn: null, sub: null
+      },
+      stepsEmulador[1],
+      stepsEmulador[2]
+    ]
+  },
+  fivem: {
+    label: 'FiveM External',
+    icon: 'fa-car',
+    color: '#1a5cff',
+    tag: 'FiveM',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('FiveM External')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Vá em ${S('Ferramentas → Drivers Essenciais')} e baixe o ${S('DControl')}. Execute-o para desativar o Windows Defender antes de rodar o launcher.`,
+        tip: 'O DControl desativa temporariamente o antivírus para evitar falsos positivos.',
+        warn: null, sub: null
+      },
+      {
+        title: '⚙️ Configurar Canal de Atualização BETA',
+        body: `Abra o FiveM e acesse ${S('Configurações → Jogo')}. Em ${S('Canal de Atualização')}, selecione ${S('BETA')} e ative.`,
+        tip: 'O canal BETA garante compatibilidade com as versões mais recentes do cheat.',
+        warn: null,
+        sub: {
+          label: 'Caminho:',
+          items: [`FiveM → Configurações → Jogo → Canal de atualização → ${S('BETA')} (Ativado)`]
+        }
+      },
+      {
+        title: '🖥️ Configurar Tipo de Tela',
+        body: `Dentro do servidor, acesse ${S('Configurações → Gráficos Avançados')} e altere o ${S('Tipo de Tela')}.`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Opções disponíveis:',
+          items: [
+            `${S('Full Screen')} — melhor desempenho`,
+            `${S('Modo Janela')} — mais fácil de alternar entre janelas`
+          ]
+        }
+      }
+    ]
+  },
+  cs2: {
+    label: 'CounterStrike',
+    icon: 'fa-crosshairs',
+    color: '#f59e0b',
+    tag: 'CS2',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('CounterStrike External')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🐍 Instalar Python 3.12',
+        body: `Vá em ${S('Ferramentas → Drivers Essenciais')} e baixe o ${S('Python 3.12')}. Instale como administrador.`,
+        tip: 'Durante a instalação, marque a opção "Add Python to PATH".',
+        warn: null, sub: null
+      },
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Baixe o ${S('DControl')} em ${S('Ferramentas → Drivers Essenciais')} e desative o Windows Defender antes de executar.`,
+        tip: null,
+        warn: 'Certifique-se de que o Secure Boot está desativado na BIOS.',
+        sub: null
+      },
+      {
+        title: '🖥️ Configurar Tipo de Tela',
+        body: `Dentro do CS2, acesse ${S('Configurações → Vídeo')} e altere o ${S('Modo de Exibição')}.`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Opções disponíveis:',
+          items: [
+            `${S('Tela Cheia')} — melhor desempenho`,
+            `${S('Janela sem Bordas')} — mais fácil de alternar entre janelas`,
+            `${S('Janela')} — compatível com ferramentas externas`
+          ]
+        }
+      },
+      {
+        title: '🎮 Requisitos do Sistema',
+        body: `Verifique se seu PC atende aos requisitos antes de executar:`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Requisitos:',
+          items: [
+            `${S('Windows 10/11')} 64-bit`,
+            `${S('CS2')} instalado e atualizado`,
+            `${S('RAM:')} 8GB mínimo`,
+            `${S('GPU:')} DirectX 11 compatível`,
+            `${S('Secure Boot:')} Desativado na BIOS`
+          ]
+        }
+      }
+    ]
+  },
+  warzone: {
+    label: 'Warzone External',
+    icon: 'fa-bomb',
+    color: '#ef4444',
+    tag: 'Warzone',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Warzone External')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Baixe o ${S('DControl')} em ${S('Ferramentas → Drivers Essenciais')} e desative o Windows Defender antes de executar.`,
+        tip: 'O DControl desativa temporariamente o antivírus para evitar falsos positivos.',
+        warn: null, sub: null
+      },
+      {
+        title: '🎮 Requisitos do Sistema',
+        body: `Verifique se seu PC atende aos requisitos:`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Requisitos:',
+          items: [
+            `${S('Windows 10/11')}`,
+            `${S('Warzone')} instalado e atualizado`,
+            `${S('RAM:')} 16GB recomendado`
+          ]
+        }
+      }
+    ]
+  },
+  valorant: {
+    label: 'Valorant External',
+    icon: 'fa-shield-halved',
+    color: '#ff4655',
+    tag: 'Valorant',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Valorant External')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Baixe o ${S('DControl')} em ${S('Ferramentas → Drivers Essenciais')} e desative o Windows Defender antes de executar.`,
+        tip: null,
+        warn: 'O Valorant usa o Vanguard Anti-Cheat. Siga as instruções do Discord para bypass.',
+        sub: null
+      },
+      {
+        title: '🎥 Instalar OBS Studio (opcional)',
+        body: `Para gravação ou streaming, vá em ${S('Ferramentas → Utilitários')} e baixe o ${S('OBS Studio')}.`,
+        tip: null, warn: null, sub: null
+      },
+      {
+        title: '🎮 Requisitos do Sistema',
+        body: `Verifique se seu PC atende aos requisitos:`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Requisitos:',
+          items: [
+            `${S('Windows 10/11')}`,
+            `${S('Valorant')} instalado e atualizado`,
+            `${S('RAM:')} 8GB mínimo`
+          ]
+        }
+      }
+    ]
+  },
+  roblox: {
+    label: 'Roblox Executor',
+    icon: 'fa-cube',
+    color: '#e74c3c',
+    tag: 'Roblox',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Roblox Executor')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Baixe o ${S('DControl')} em ${S('Ferramentas → Drivers Essenciais')} e desative o Windows Defender antes de executar.`,
+        tip: 'O DControl desativa temporariamente o antivírus para evitar falsos positivos.',
+        warn: null, sub: null
+      },
+      {
+        title: '🎮 Executar o Roblox e Injetar',
+        body: `Abra o ${S('Roblox')}, entre em qualquer jogo e então execute o launcher do Executor. Aguarde a injeção ser concluída.`,
+        tip: 'Execute o launcher sempre após entrar no jogo, nunca antes.',
+        warn: null, sub: null
+      }
+    ]
+  },
+  fortnite: {
+    label: 'Fortnite External',
+    icon: 'fa-star',
+    color: '#9b59b6',
+    tag: 'Fortnite',
+    steps: [
+      {
+        title: '📥 Baixar o Launcher',
+        body: `Acesse ${S('Downloads')}, clique em ${S('Fortnite External')} e baixe o launcher. Senha: ${KB('1')}`,
+        tip: null, warn: null, sub: null
+      },
+      ...stepsDrivers,
+      {
+        title: '🛡️ Baixar o DControl (Desativar Antivírus)',
+        body: `Baixe o ${S('DControl')} em ${S('Ferramentas → Drivers Essenciais')} e desative o Windows Defender antes de executar.`,
+        tip: 'O DControl desativa temporariamente o antivírus para evitar falsos positivos.',
+        warn: null, sub: null
+      },
+      {
+        title: '🎮 Requisitos do Sistema',
+        body: `Verifique se seu PC atende aos requisitos:`,
+        tip: null, warn: null,
+        sub: {
+          label: 'Requisitos:',
+          items: [
+            `${S('Windows 10/11')}`,
+            `${S('Fortnite')} instalado e atualizado`,
+            `${S('RAM:')} 8GB mínimo`
+          ]
+        }
+      }
+    ]
+  }
+};
+
+function renderTutoriais(){
+  const container = document.getElementById('content-tutoriais');
+  container.innerHTML = '';
+
+  // Grupos de produtos
+  const grupos = [
+    { label: '🔥 Free Fire', keys: ['freefire_ext','freefire_int','freefire_classic','freefire_bypass_mobile','freefire_bypass_replay'] },
+    { label: '🎮 Outros Jogos', keys: ['fivem','cs2','warzone','valorant','roblox','fortnite'] }
+  ];
+
+  // Seletor de grupos
+  const groupSelector = document.createElement('div');
+  groupSelector.className = 'tutorial-group-selector';
+  groupSelector.innerHTML = grupos.map((g,i) => `
+    <button class="tut-group-btn${i===0?' active':''}" onclick="switchTutGroup(${i})">${g.label}</button>
+  `).join('');
+  container.appendChild(groupSelector);
+
+  // Painéis de grupo
+  grupos.forEach((grupo, gi) => {
+    const groupPanel = document.createElement('div');
+    groupPanel.className = `tut-group-panel${gi===0?' active':''}`;
+    groupPanel.id = `tut-group-${gi}`;
+
+    // Seletor de produto dentro do grupo
+    const selector = document.createElement('div');
+    selector.className = 'tutorial-selector';
+
+    grupo.keys.forEach((key, ki) => {
+      const tut = tutoriaisData[key];
+      const btn = document.createElement('button');
+      btn.className = `tutorial-btn${ki===0?' active':''}`;
+      btn.dataset.group = gi;
+      btn.innerHTML = `<i class="fa-solid ${tut.icon}" style="color:${tut.color}"></i> ${tut.label}`;
+      btn.onclick = () => {
+        groupPanel.querySelectorAll('.tutorial-btn').forEach(b => b.classList.remove('active'));
+        groupPanel.querySelectorAll('.tutorial-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tut-' + key).classList.add('active');
+      };
+      selector.appendChild(btn);
+    });
+
+    groupPanel.appendChild(selector);
+
+    // Painéis de cada produto
+    grupo.keys.forEach((key, ki) => {
+      const tut = tutoriaisData[key];
+      const panel = document.createElement('div');
+      panel.className = `tutorial-panel${ki===0?' active':''}`;
+      panel.id = 'tut-' + key;
+
+      // Header do painel
+      const panelHeader = document.createElement('div');
+      panelHeader.className = 'tut-panel-header';
+      panelHeader.innerHTML = `
+        <div class="tut-panel-icon" style="background:${tut.color}22; border-color:${tut.color}44">
+          <i class="fa-solid ${tut.icon}" style="color:${tut.color}"></i>
+        </div>
+        <div>
+          <div class="tut-panel-title">${tut.label}</div>
+          <div class="tut-panel-tag">${tut.tag} · ${tut.steps.length} passos</div>
+        </div>
+      `;
+      panel.appendChild(panelHeader);
+
+      const stepsDiv = document.createElement('div');
+      stepsDiv.className = 'tutorial-steps';
+
+      tut.steps.forEach((step, i) => {
+        const stepEl = document.createElement('div');
+        stepEl.className = 'tutorial-step';
+        stepEl.style.animationDelay = (i * 0.06) + 's';
+
+        let bodyHTML = `<p>${step.body}</p>`;
+        if(step.sub){
+          bodyHTML += `<div class="step-sub"><p>${step.sub.label}</p><ul>${step.sub.items.map(it=>`<li>${it}</li>`).join('')}</ul></div>`;
+        }
+        if(step.tip){
+          bodyHTML += `<div class="step-tip"><i class="fa-solid fa-lightbulb"></i><span>${step.tip}</span></div>`;
+        }
+        if(step.warn){
+          bodyHTML += `<div class="step-warn"><i class="fa-solid fa-triangle-exclamation"></i><span>${step.warn}</span></div>`;
+        }
+
+        stepEl.innerHTML = `
+          <div class="step-header" onclick="toggleStep(this)">
+            <div class="step-number" style="background:${tut.color}22;border-color:${tut.color}55;color:${tut.color}">${i+1}</div>
+            <div class="step-title">${step.title}</div>
+            <i class="fa-solid fa-chevron-down step-icon"></i>
+          </div>
+          <div class="step-body">${bodyHTML}</div>
+        `;
+        stepsDiv.appendChild(stepEl);
+      });
+
+      panel.appendChild(stepsDiv);
+      groupPanel.appendChild(panel);
+    });
+
+    container.appendChild(groupPanel);
+  });
+}
+
+function switchTutGroup(idx){
+  document.querySelectorAll('.tut-group-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+  document.querySelectorAll('.tut-group-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+}
+
+function toggleStep(header){
+  const step = header.parentElement;
+  const isOpen = step.classList.contains('open');
+  const panel = step.closest('.tutorial-panel');
+  panel.querySelectorAll('.tutorial-step.open').forEach(s => s.classList.remove('open'));
+  if(!isOpen) step.classList.add('open');
+}
+
 renderCards(downloads, 'content-downloads');
 renderCards(ferramentas, 'content-ferramentas');
+renderTutoriais();
 </script>
 
 </body>
