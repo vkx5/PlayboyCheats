@@ -1652,6 +1652,7 @@ const ferramentasDB = {
     'Hyper V Disabler': 'https://files.catbox.moe/hy7rci.rar',
     'DControl': 'https://files.catbox.moe/wv3ybv.rar',
     'Python 3.12': 'https://www.python.org/ftp/python/3.12.9/python-3.12.9-amd64.exe',
+    'RazerSynapse': 'https://dl.razerzone.com/drivers/Synapse4/RazerSynapseInstaller.exe',
     'Driver NVIDIA (GPU NVIDIA)': 'https://us.download.nvidia.com/nvapp/client/11.0.6.383/NVIDIA_app_v11.0.6.383.exe',
     'Driver AMD (GPU AMD)': 'https://drivers.amd.com/drivers/installer/25.30/whql/amd-software-adrenalin-edition-26.2.2-minimalsetup-260225_web.exe'
   }
@@ -1791,8 +1792,8 @@ const downloads = [
         compatibilidade: ['Windows 10/11', 'Valorant instalado', 'RAM: 8GB mínimo'],
         requisitos: {
           emuladores: [],
-          drivers: ['Visual C++', 'DirectX', 'DControl'],
-          ferramentas: ['OBS Studio']
+          drivers: ['Visual C++', 'DirectX', 'DControl', 'RazerSynapse'],
+          ferramentas: []
         }
       },
       { 
@@ -1898,7 +1899,7 @@ const statusProdutos = [
   { nome:"CounterStrike External", status:"online" },
   { nome:"Roblox Executor", status:"update" },
   { nome:"Warzone External", status:"update" },
-  { nome:"Valorant External", status:"update" },
+  { nome:"Valorant External", status:"online" },
   { nome:"Fortnite External", status:"update" },
   { nome:"Free Fire Iphone", status:"update" },
   { nome:"Free Fire Android", status:"update" }
@@ -2767,8 +2768,8 @@ const tutoriaisData = {
         sub: null
       },
       {
-        title: '🎥 Instalar OBS Studio (opcional)',
-        body: `Para gravação ou streaming, vá em ${S('Ferramentas → Utilitários')} e baixe o ${S('OBS Studio')}.`,
+        title: '🎥 Instalar RazerSynapse (obrigatório)',
+        body: `O painel funcionará apenas se o Razer Synapse estiver aberto em segundo plano.`,
         tip: null, warn: null, sub: null
       },
       {
@@ -2780,7 +2781,7 @@ const tutoriaisData = {
           items: [
             `${S('Windows 10/11')}`,
             `${S('Valorant')} instalado e atualizado`,
-            `${S('RAM:')} 8GB mínimo`
+            `${S('RazerSynapse:')} aberto`
           ]
         }
       }
