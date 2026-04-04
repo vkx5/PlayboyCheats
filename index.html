@@ -2454,7 +2454,6 @@ function createParticles(){
 
 createParticles();
 
-// ===================== TUTORIAIS =====================
 const S = t => `<strong class="hl">${t}</strong>`;
 const KB = t => `<kbd class="kbkey">${t}</kbd>`;
 
@@ -2615,7 +2614,22 @@ const tutoriaisData = {
         tip: null, warn: null, sub: null
       },
       stepsEmulador[1],
-      stepsEmulador[2]
+      stepsEmulador[2],
+      {
+        title: '📱 Configurar ADB para Bypass',
+        body: `Ative o ADB no emulador. No celular, ative a ${S('Depuração USB')} nas opções de desenvolvedor. Conecte o celular ao PC com o cabo USB. No programa, clique em ${S('Start Transfer')}.`,
+        tip: null,
+        warn: 'Se não funcionar, siga os passos de solução de problemas abaixo.',
+        sub: {
+          label: 'Solução de problemas:',
+          items: [
+            `Desconecte o celular do PC`,
+            `No celular, vá em ${S('Opções de Desenvolvedor')} e toque em ${S('Revogar autorizações de depuração USB')}`,
+            `Conecte o celular novamente ao computador`,
+            `Vai aparecer uma mensagem no celular pedindo para autorizar o computador. Toque em ${S('Permitir')}`
+          ]
+        }
+      }
     ]
   },
   fivem: {
@@ -2857,13 +2871,11 @@ function renderTutoriais(){
   const container = document.getElementById('content-tutoriais');
   container.innerHTML = '';
 
-  // Grupos de produtos
   const grupos = [
     { label: '🔥 Free Fire', keys: ['freefire_ext','freefire_int','freefire_classic','freefire_bypass_mobile','freefire_bypass_replay'] },
     { label: '🎮 Outros Jogos', keys: ['fivem','cs2','warzone','valorant','roblox','fortnite'] }
   ];
 
-  // Seletor de grupos
   const groupSelector = document.createElement('div');
   groupSelector.className = 'tutorial-group-selector';
   groupSelector.innerHTML = grupos.map((g,i) => `
@@ -2871,13 +2883,11 @@ function renderTutoriais(){
   `).join('');
   container.appendChild(groupSelector);
 
-  // Painéis de grupo
   grupos.forEach((grupo, gi) => {
     const groupPanel = document.createElement('div');
     groupPanel.className = `tut-group-panel${gi===0?' active':''}`;
     groupPanel.id = `tut-group-${gi}`;
 
-    // Seletor de produto dentro do grupo
     const selector = document.createElement('div');
     selector.className = 'tutorial-selector';
 
