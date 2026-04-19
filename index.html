@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="PlayboyCheats - Central completa de downloads e ferramentas para jogos" />
-  <title>PlayboyCheats - Central Completa</title>
+  <meta name="description" content="PlayboyCheats - Central De Download de downloads e ferramentas para jogos" />
+  <title>PlayboyCheats - Central De Download</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,7 +105,7 @@
       z-index:1;
     }
 
-    /* SCROLLBAR CUSTOMIZADA */
+    
     ::-webkit-scrollbar{
       width:10px;
       height:10px;
@@ -244,7 +244,7 @@
       opacity:.9;
     }
 
-    /* TABS */
+    
     .tabs{
       display:flex;
       gap:8px;
@@ -446,7 +446,7 @@
       box-shadow:0 6px 16px rgba(26,92,255,.3);
     }
 
-    /* STATUS BADGES */
+    
     .status{
       display:inline-flex;
       align-items:center;
@@ -651,7 +651,7 @@
       border-radius:10px;
     }
 
-    /* RESPONSIVIDADE */
+    
     @media (max-width: 768px){
       body{padding:20px 8px}
       
@@ -731,7 +731,7 @@
       }
     }
 
-    /* MODAL */
+    
     .modal-overlay{
       position:fixed;
       inset:0;
@@ -956,7 +956,7 @@
       text-transform:uppercase;
     }
 
-    /* SUB-OPTIONS */
+    
     .sub-options{
       display:none;
       flex-direction:column;
@@ -1083,7 +1083,7 @@
       background:var(--primary);
     }
 
-    /* PROGRESS BAR */
+    
     .download-progress{
       display:none;
       margin-top:16px;
@@ -1164,7 +1164,7 @@
       text-align:center;
     }
 
-    /* DOWNLOAD LINK ITEM */
+    
     .download-link-item{
       background:var(--card-hover);
       border:1px solid var(--border);
@@ -1223,7 +1223,7 @@
       pointer-events:none;
     }
 
-    /* TUTORIAIS */
+    
     .tutorial-selector{
       display:flex;
       gap:12px;
@@ -1404,7 +1404,7 @@
       transform:translateY(-2px);
       box-shadow:0 6px 16px rgba(26,92,255,.35);
     }
-    /* GRUPO SELECTOR */
+    
     .tutorial-group-selector{
       display:flex;
       gap:8px;
@@ -1430,7 +1430,7 @@
     .tut-group-panel{ display:none; }
     .tut-group-panel.active{ display:block; animation:fadeInUp .35s ease; }
 
-    /* PANEL HEADER */
+    
     .tut-panel-header{
       display:flex;
       align-items:center;
@@ -1463,7 +1463,7 @@
       margin-top:2px;
     }
 
-    /* HIGHLIGHT & KBD */
+    
     .hl{
       color:#fff;
       font-weight:600;
@@ -1498,10 +1498,10 @@
   <header>
     <img src="https://blob.promisse.app/216240699819950080/59671800419_image.png" alt="PlayboyCheats">
     <div class="header-text">
-      <h1>PlayboyCheats Central</h1>
+      <h1>Playboy Cheats - Central De Downloads</h1>
       <p>Downloads e Ferramentas em um só lugar</p>
     </div>
-    <a href="https://discord.gg/tQQPUZu9Q3" target="_blank" class="discord-btn" aria-label="Entrar no Discord">
+    <a href="https://discord.gg/PQ6N9VbWpw" target="_blank" class="discord-btn" aria-label="Entrar no Discord">
       <i class="fa-brands fa-discord"></i>
       Discord
     </a>
@@ -1519,25 +1519,24 @@
     </button>
   </div>
 
-  <!-- TAB: DOWNLOADS -->
+  
   <div id="downloads" class="tab-content active">
     <div id="content-downloads"></div>
   </div>
 
-  <!-- TAB: FERRAMENTAS -->
+  
   <div id="ferramentas" class="tab-content">
     <div id="content-ferramentas"></div>
   </div>
 
-  <!-- TAB: TUTORIAIS -->
+  
   <div id="tutoriais" class="tab-content">
     <div id="content-tutoriais"></div>
   </div>
 
-  <footer>© 2026 PlayboyCheats — Central Completa</footer>
+  <footer>© 2026 PlayboyCheats — Central De Downloads</footer>
 </div>
 
-<!-- MODAL DE LISTA DE DOWNLOADS -->
 <div class="modal-overlay" id="downloadListModal">
   <div class="modal">
     <div class="modal-header">
@@ -1572,7 +1571,6 @@
   </div>
 </div>
 
-<!-- MODAL DE DOWNLOAD -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <div class="modal-header">
@@ -1580,13 +1578,13 @@
       <button class="modal-close" onclick="closeModal()" aria-label="Fechar modal">×</button>
     </div>
     <div class="modal-body">
-      <!-- Compatibilidade -->
+      
       <div class="compatibility-section">
         <h4><i class="fa-solid fa-circle-info"></i> Compatibilidade</h4>
         <div class="compatibility-list" id="compatibilityList"></div>
       </div>
 
-      <!-- Opções de Download -->
+      
       <div class="download-options">
         <label class="download-option" id="optionLauncher">
           <div class="option-header">
@@ -1640,6 +1638,7 @@
 </div>
 
 <script>
+
 const ferramentasDB = {
   emuladores: {
     'BlueStacks 5.12': 'https://files.catbox.moe/cxp0iz.rar',
@@ -1660,11 +1659,10 @@ const ferramentasDB = {
 
 const downloads = [
   {
-    nome: 'Produto',
+    nome: 'PlayboyCheats',
     itens: [
       { 
         nome:'Free Fire External', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/pee2s0.rar',
         compatibilidade: ['Windows 10/11', 'Emulador BlueStacks 5.12+', 'RAM: 4GB mínimo'],
         requisitos: {
@@ -1675,7 +1673,6 @@ const downloads = [
       },
       { 
         nome:'Free Fire Internal', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/gis45j.rar',
         compatibilidade: ['Windows 10/11', 'Emulador BlueStacks 5.22+', 'RAM: 6GB mínimo'],
         requisitos: {
@@ -1686,7 +1683,6 @@ const downloads = [
       },
       { 
         nome:'Free Fire Classic', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/shuars.rar',
         compatibilidade: ['Windows 10/11', 'Emulador BlueStacks 5.12+', 'RAM: 4GB mínimo'],
         requisitos: {
@@ -1697,7 +1693,6 @@ const downloads = [
       },
       { 
         nome:'Free Fire Bypass Mobile', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/sadzc5.rar',
         compatibilidade: ['Android 8.0+', 'Root não necessário', 'Dispositivo físico'],
         requisitos: {
@@ -1708,7 +1703,6 @@ const downloads = [
       },
       { 
         nome:'Free Fire Bypass Replay', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/r7vtcd.rar',
         compatibilidade: ['Windows 10/11', 'Emulador BlueStacks 5.12+', 'RAM: 4GB mínimo'],
         requisitos: {
@@ -1719,7 +1713,6 @@ const downloads = [
       },
       { 
         nome:'Free Fire Android', 
-        desc:'Senha: 1', 
         link:'#',
         compatibilidade: ['Android 8.0+', 'Root necessário', 'Dispositivo físico'],
         requisitos: {
@@ -1730,7 +1723,6 @@ const downloads = [
       },    
       { 
         nome:'Free Fire Iphone', 
-        desc:'Senha: 1', 
         link:'#',
         compatibilidade: ['iOS 13+', 'Jailbreak necessário', 'iPhone 8 ou superior'],
         requisitos: {
@@ -1742,11 +1734,10 @@ const downloads = [
     ]
   },
   {
-    nome: 'Produto',
+    nome: 'PlayboyCheats',
     itens: [
       { 
         nome:'FiveM External', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/8e42mr.rar',
         compatibilidade: ['Windows 10/11', 'GTA V instalado', 'RAM: 8GB mínimo'],
         requisitos: {
@@ -1757,7 +1748,6 @@ const downloads = [
       },
       { 
         nome:'CounterStrike External', 
-        desc:'Senha: 1', 
         link:'https://store-na-phx-1.gofile.io/download/web/2d5b397f-e391-4d4f-9e95-a87a9557c55b/Cs2-External.rar',
         compatibilidade: [
         'Windows 10/11 64-bit',
@@ -1776,7 +1766,6 @@ const downloads = [
       },
       { 
         nome:'Warzone External', 
-        desc:'Senha: 1', 
         link:'',
         compatibilidade: ['Windows 10/11', 'Warzone instalado', 'RAM: 16GB recomendado'],
         requisitos: {
@@ -1787,7 +1776,6 @@ const downloads = [
       },
       { 
         nome:'Valorant External', 
-        desc:'Senha: 1', 
         link:'https://files.catbox.moe/3ms7ry.rar',
         compatibilidade: ['Windows 10/11', 'Valorant instalado', 'RAM: 8GB mínimo'],
         requisitos: {
@@ -1798,7 +1786,6 @@ const downloads = [
       },
       { 
         nome:'Roblox Executor', 
-        desc:'Senha: 1', 
         link:'',
         compatibilidade: ['Windows 10/11', 'Roblox instalado', 'RAM: 4GB mínimo'],
         requisitos: {
@@ -1809,7 +1796,6 @@ const downloads = [
       },
       { 
         nome:'Fortnite External', 
-        desc:'Senha: 1', 
         link:'',
         compatibilidade: ['Windows 10/11', 'Fortnite instalado', 'RAM: 8GB mínimo'],
         requisitos: {
@@ -2510,7 +2496,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire External')} e baixe o launcher. Senha do arquivo: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2532,7 +2518,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire Internal')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('FreeFire Internal')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2559,7 +2545,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Classic')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Classic')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2581,7 +2567,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Mobile')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Mobile')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2603,7 +2589,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Replay')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Free Fire Bypass Replay')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2640,7 +2626,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('FiveM External')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('FiveM External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2682,7 +2668,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('CounterStrike External')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('CounterStrike External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2737,7 +2723,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Warzone External')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Warzone External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2770,7 +2756,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Valorant External')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Valorant External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2814,7 +2800,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Roblox Executor')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Roblox Executor')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2840,7 +2826,7 @@ const tutoriaisData = {
     steps: [
       {
         title: '📥 Baixar o Launcher',
-        body: `Acesse ${S('Downloads')}, clique em ${S('Fortnite External')} e baixe o launcher. Senha: ${KB('1')}`,
+        body: `Acesse ${S('Downloads')}, clique em ${S('Fortnite External')} e baixe o launcher.`,
         tip: null, warn: null, sub: null
       },
       ...stepsDrivers,
@@ -2908,14 +2894,14 @@ function renderTutoriais(){
 
     groupPanel.appendChild(selector);
 
-    // Painéis de cada produto
+    
     grupo.keys.forEach((key, ki) => {
       const tut = tutoriaisData[key];
       const panel = document.createElement('div');
       panel.className = `tutorial-panel${ki===0?' active':''}`;
       panel.id = 'tut-' + key;
 
-      // Header do painel
+      
       const panelHeader = document.createElement('div');
       panelHeader.className = 'tut-panel-header';
       panelHeader.innerHTML = `
